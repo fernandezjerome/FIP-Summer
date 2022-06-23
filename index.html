@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <title>Box Model</title>
+</head>
+<body class="site">
+    <h1 class="hidden">Grid Sandbox</h1>
+    <a class="hidden" href="#content">Skip to content</a>
+    <header class="head">
+        <div class="logo box-model">logo</div>
+        <nav class="nav box-model" aria-label="Main Navigation">
+            <h3 class="hidden">Main Navigation</h3>
+            <p>Nav</p>
+        </nav>
+    </header>
+    <main class="main" id="content">
+        <section>
+            <h2 class="hidden">Local News</h2>
+            <div class="three-items custom-override">
+                <div class="box-model"><h3>Local News 1</h3></div>
+                <div class="box-model">Local News 2</div>
+                <div class="box-model">Local News 3</div>
+            </div>
+        </section>
+        <section>
+            <h2 class="hidden">World News</h2>
+            <div class="three-items custom-override">
+                <div class="box-model">World News 1</div>
+                <div class="box-model">World News 2</div>
+                <div class="box-model">World News 3</div>
+            </div>
+        </section>
+        <section>
+            <h2 class="hidden">Videos</h2>
+            <div class="two-items">
+                <div class="box-model">Video 1</div>
+                <div class="box-model">Video 2</div>
+            </div>
+        </section>
+    </main>
+    <footer class="foot">
+            <h2 class="hidden">Site Footer</h2>
+    </footer>
+</body>
+</html>
