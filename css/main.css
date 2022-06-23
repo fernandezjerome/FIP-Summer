@@ -10,6 +10,7 @@ Tags: GRID, Build, Be Awesome
 	--lightest: #F7F4E9;
 	--light: #BCAD8F;
 	--dark: #AC9567;
+	--footerColor: #706654; 
 	--darkest: #845904; }
   
 	/* reset */
@@ -82,6 +83,7 @@ ___________________________________________ */
 	display: flex;
 	list-style-type: none;
 	text-decoration: none;
+	justify-content: center;
    }
 
    nav li a {
@@ -119,9 +121,20 @@ ___________________________________________ */
    @supports (grid-area: auto) {
 
 	/*------------ Start Mobile ------------*/
+	.foot-nav {
+		background-color: var(--footerColor);
+	}
+	.foot-nav a {
+		font-size: 13px;
+		color: var(--light);
+	}
 
 	.site {
 		max-width: 699px;
+	}
+
+	.contact-us {
+	background-color: aqua;
 	}
 
 
@@ -136,7 +149,7 @@ ___________________________________________ */
 
 	.head, .main > *, .foot {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(1, 1fr);
 	}
 
  
