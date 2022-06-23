@@ -47,6 +47,10 @@ ___________________________________________ */
    .top-nav {
 	display: none;
 }
+	.hamburger img {
+		height: 1rem;
+	}
+
    .nav-grid{
 	padding-top: 1rem;
 	padding-bottom: 1rem;
@@ -122,6 +126,13 @@ ___________________________________________ */
 
 
 	/*------------ Mobile Grid Items ------------*/
+	.nav-grid{
+			
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		justify-items: center;
+		background-color: var(--lightest);
+	}
 
 	.head, .main > *, .foot {
 		display: grid;
@@ -173,6 +184,7 @@ ___________________________________________ */
 		.top-nav {
 		display: none;
 		}
+
 		/*------------ Grid Items ------------*/
 
 		.head, .main > *, .foot {
@@ -229,7 +241,9 @@ ___________________________________________ */
 
 		.top-nav {
 			display: block;
-
+		}
+		.hamburger {
+			display: none;
 		}
 		/*------------ Grid Items ------------*/
 
@@ -238,13 +252,7 @@ ___________________________________________ */
 			grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
 		}
 
-		.nav-grid{
-			
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			justify-items: center;
-			background-color: var(--lightest);
-		}
+	
 		.social {
 			grid-column: 3 / span 3;
 			/* align-items: center; */
