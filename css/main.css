@@ -6,60 +6,18 @@ Version: 1.0
 Tags: GRID, Build, Be Awesome
 */
 
-/*--------------------------------------------------------------
-Accessibility
---------------------------------------------------------------*/
-
-/* Text meant only for screen readers */
-.screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-}
-
-.screen-reader-text:hover,
-.screen-reader-text:active,
-.screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar */
-}
-
-/* -------------
-  Fonts
--------------- */
-
-
-/* ------------ */
-
-/* -------------
-  Plugins
--------------*/
-
-/* -------------
-  Reset
--------------*/
-
-body {
+:root {
+	--lightest: #F7F4E9;
+	--light: #BCAD8F;
+	--dark: #AC9567;
+	--darkest: #845904; }
+  
+	/* reset */
+  body {
 	margin: 0;
 	padding: 0;
+	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
-	color: #fff;
 }
 
 h1, h2, h3, h4, p {
@@ -69,12 +27,6 @@ h1, h2, h3, h4, p {
 
 a {
 	text-decoration: none;
-}
-
-input, textarea {
-	display: block;
-	margin: 0;
-	padding: 0;
 }
 
 /* ___________________________________________
@@ -92,11 +44,45 @@ ___________________________________________ */
    .hidden {
        display: none;
    }
+   .top-nav {
+	display: none;
+}
+   .nav-grid{
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	align-items: center;
+   }
 
+   .nav-grid a {
+	font-size: 13px;
+   }
+   .social {
+	display: flex;	
+	/* background-color: var(--lightest); */
+}
+
+
+
+	.social img {
+		height: 1rem;
+		padding: .3rem;
+	}
    .box-model {
 	   margin: 1rem;
 	   padding: 1rem;
 	   background: #000;
+   }
+
+
+   nav ul {
+	display: flex;
+	list-style-type: none;
+	text-decoration: none;
+   }
+
+   nav li a {
+		padding: 2rem;   
+	   color: var(--dark);
    }
 
    /*------- Floats --------*/
@@ -108,7 +94,6 @@ ___________________________________________ */
    .f-right {
 	   float: right;
    }
-
    /*------- End Floats --------*/
    /*------- Font Awesome -------*/
 
@@ -120,6 +105,11 @@ ___________________________________________ */
 	   padding: 0 1em;
    }
 
+
+.logo img {
+	height: 30px;
+}
+
    /*------- End Mobile Padding ---------*/
 
    @supports (grid-area: auto) {
@@ -130,6 +120,7 @@ ___________________________________________ */
 		max-width: 699px;
 	}
 
+
 	/*------------ Mobile Grid Items ------------*/
 
 	.head, .main > *, .foot {
@@ -137,6 +128,7 @@ ___________________________________________ */
 		grid-template-columns: repeat(2, 1fr);
 	}
 
+ 
 	.one-item {
 		display: grid;
 		grid-column: 1 / span 2;
@@ -146,7 +138,7 @@ ___________________________________________ */
 	.two-items {
 		display: grid;
 		grid-column: 1 / span 2;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(1, 1fr);
 		justify-content: space-evenly;
 		row-gap: 2em;
 		column-gap: 2em;
@@ -167,26 +159,29 @@ ___________________________________________ */
 		grid-template-columns: 1fr;
 	}
 
-	.logo {
-		grid-column: 1 / span 1;
-	}
 
-	.nav {
-		grid-column: 2 / span 1;
-	}
 
-   @media screen and (min-width: 1024px) {
+
+
+
+   @media screen and (min-width: 768px) {
 
 		.site {
 			max-width: none;
 		}
 
+		.top-nav {
+		display: none;
+		}
 		/*------------ Grid Items ------------*/
 
 		.head, .main > *, .foot {
 			display: grid;
 			grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
 		}
+
+	
+
 
 		.one-item {
 			display: grid;
@@ -201,6 +196,74 @@ ___________________________________________ */
 			justify-content: space-evenly;
 			row-gap: 2em;
 			column-gap: 2em;
+		}
+
+		.three-items {
+			display: grid;
+			grid-column: 2 / span 2;
+			grid-template-columns: repeat(2, 1fr);
+			justify-content: space-evenly;
+			row-gap: 2em;
+			column-gap: 2em;
+		}
+
+		.four-items {
+			display: grid;
+			grid-column: 2 / span 2;
+			grid-template-columns: repeat(2, 1fr);
+			justify-content: space-evenly;
+			row-gap: 2em;
+			column-gap: 2em;
+		}
+
+		/*------------  End Grid Items ------------*/
+
+
+	}
+	
+	@media screen and (min-width: 1024px) {
+
+		.site {
+			max-width: none;
+		}
+
+		.top-nav {
+			display: block;
+
+		}
+		/*------------ Grid Items ------------*/
+
+		.head, .main > *, .foot {
+			display: grid;
+			grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
+		}
+
+		.nav-grid{
+			
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			justify-items: center;
+			background-color: var(--lightest);
+		}
+		.social {
+			grid-column: 3 / span 3;
+			/* align-items: center; */
+
+		}
+
+		.one-item {
+			display: grid;
+			grid-column: 2 / span 2;
+			grid-template-columns: 1fr;
+		}
+
+		.two-items {
+			display: grid;
+			grid-column: 2 / span 2;
+			grid-template-columns: repeat(2, 1fr);
+			justify-content: space-evenly;
+			row-gap: 2em;
+			/* column-gap: 2em; */
 		}
 
 		.three-items {
@@ -223,8 +286,7 @@ ___________________________________________ */
 
 		/*------------  End Grid Items ------------*/
 
-		.nav {
-			grid-column: 2 / span 3;
-		}
-	}
-   }
+
+
+
+   }}

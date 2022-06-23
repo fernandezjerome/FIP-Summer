@@ -4,41 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
     <title>Box Model</title>
 </head>
 <body class="site">
     <h1 class="hidden">Grid Sandbox</h1>
     <a class="hidden" href="#content">Skip to content</a>
-    <header class="head">
-        <div class="logo box-model">logo</div>
-        <nav class="nav box-model" aria-label="Main Navigation">
+    
+    <header class="nav-grid">
+        <div class="logo">
+            <img src="images/orbitz_logo.svg" alt="">
+         </div>
+
+       <nav class="top-nav" aria-label="Main Navigation">
             <h3 class="hidden">Main Navigation</h3>
-            <p>Nav</p>
+            <ul> 
+                <li><a href="#" id="selected">HOME</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">ABOUT</a></li>
+            </ul>
+        </nav>
+        <nav class="social">
+            <img src="images/social-fb.svg" alt="">
+            <img src="images/social-insta.svg" alt="">
+            <img src="images/social-twitter.svg" alt="">
         </nav>
     </header>
+    
     <main class="main" id="content">
+        <section>
+            <h2 class="hidden">World News</h2>
+            <div class="one-item custom-override">
+                <div class="box-model">One Item</div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="hidden">Videos</h2>
+            <div class="two-items test">
+                <div class="box-model">Two Item</div>
+                <div class="box-model">Two Item</div>
+            </div>
+        </section>
+
+
+
+
         <section>
             <h2 class="hidden">Local News</h2>
             <div class="three-items custom-override">
-                <div class="box-model"><h3>Local News 1</h3></div>
-                <div class="box-model">Local News 2</div>
-                <div class="box-model">Local News 3</div>
+                <div class="box-model"><h3>Three item</h3></div>
+                <div class="box-model"><h3>Three item</h3></div>
+                <div class="box-model"><h3>Three item</h3></div>
+
             </div>
         </section>
+        
+    
+        
         <section>
-            <h2 class="hidden">World News</h2>
-            <div class="three-items custom-override">
-                <div class="box-model">World News 1</div>
-                <div class="box-model">World News 2</div>
-                <div class="box-model">World News 3</div>
-            </div>
-        </section>
-        <section>
-            <h2 class="hidden">Videos</h2>
-            <div class="two-items">
-                <div class="box-model">Video 1</div>
-                <div class="box-model">Video 2</div>
+            <h2 class="hidden">Local News</h2>
+            <div class="four-items custom-override">
+                <div class="box-model"><h3>four-items item</h3></div>
+                <div class="box-model"><h3>four item</h3></div>
+                <div class="box-model"><h3>four item</h3></div>
+                <div class="box-model"><h3>four item</h3></div>
+
             </div>
         </section>
     </main>
