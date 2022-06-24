@@ -85,6 +85,7 @@ ___________________________________________ */
    .box-model {
 	   margin: 1rem;
 	   padding: 1rem;
+	   color: #F7F4E9;
 	   background: #000;
    }
 
@@ -176,6 +177,8 @@ ___________________________________________ */
 
 	/*------------ Start Mobile ------------*/
 
+	
+
 
 	.site {
 		max-width: 699px;
@@ -211,6 +214,16 @@ ___________________________________________ */
 	}
 
 	.three-items {
+		display: grid;
+		grid-column: 1 / span 2;
+		grid-template-columns: repeat(3, 1fr);
+		justify-content: space-evenly;
+		row-gap: 2em;
+		column-gap: 2em;
+	}
+
+
+	.footer-grid {
 		display: grid;
 		grid-column: 1 / span 2;
 		grid-template-columns: repeat(3, 1fr);
@@ -284,6 +297,20 @@ ___________________________________________ */
 			column-gap: 2em;
 		}
 
+		.span-grid {
+			grid-column: 1 / span 2;
+	
+		}
+
+		.footer-grid {
+			display: grid;
+			grid-column: 2 / span 2;
+			grid-template-columns: repeat(2, 1fr);
+			justify-content: space-evenly;
+			row-gap: 2em;
+			column-gap: 2em;
+		}
+
 		/*------------  End Grid Items ------------*/
 
 
@@ -345,6 +372,18 @@ ___________________________________________ */
 			grid-column: 2 / span 2;
 			grid-template-columns: repeat(4, 1fr);
 			justify-content: space-evenly;
+			row-gap: 2em;
+			column-gap: 2em;
+		}
+
+		.span-grid {
+			grid-column: 1 / span 2;
+	
+		}
+
+		.footer-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
 			row-gap: 2em;
 			column-gap: 2em;
 		}
