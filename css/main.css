@@ -60,9 +60,7 @@ ___________________________________________ */
 	align-items: center;
    }
 
-   .nav-grid a {
-	font-size: 13px;
-   }
+
    .social {
 	display: flex;	
 	/* background-color: var(--lightest); */
@@ -98,12 +96,12 @@ footer {
 	    color: var(--dark);
    }
    
-   .footer-about  ul li a {
-	/* display: flex; */
-	
-	background-color: #000;
+   #footer-about  ul {
+	flex-direction: column;
+	list-style: none;
    }
    /*------- Floats --------*/
+
 
    .f-left {
 	   float: left;
@@ -127,23 +125,20 @@ footer {
 .logo img {
 	height: 30px;
 }
+	.foot-style {
+		background-color: var(--footerColor);
+	}
+	.foot-style a {
+		font-size: 13px;
+		color: var(--light);
+	}
 
    /*------- End Mobile Padding ---------*/
 
    @supports (grid-area: auto) {
 
 	/*------------ Start Mobile ------------*/
-	.foot-nav {
-		background-color: var(--footerColor);
-	}
-	.foot-nav a {
-		font-size: 13px;
-		color: var(--light);
-		
-		
 
-	
-	}
 
 	.site {
 		max-width: 699px;
@@ -271,6 +266,7 @@ footer {
 		.top-nav {
 			display: block;
 		}
+
 		.hamburger {
 			display: none;
 		}
