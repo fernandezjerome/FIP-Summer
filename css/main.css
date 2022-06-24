@@ -55,11 +55,12 @@ ___________________________________________ */
 }
 
 #button {
-  width: 100;
+  /* width: 100; */
 
   background-color: var(--lightest);
-  margin: 1rem 10rem 0 10rem;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  margin: 1rem 1rem 0 1rem;
+  padding: 1%;
+
   /* align-items: center; */
 }
 
@@ -81,7 +82,7 @@ ___________________________________________ */
 
 .social img {
   height: 1rem;
-  padding: 0.3rem;
+  padding: 1rem 0.5rem;
 }
 .box-model {
   margin: 1rem;
@@ -119,14 +120,18 @@ footer {
   margin: 2rem;
 }
 
-.copyright p {
-  color: var(--dark);
-  text-align: center;
-  padding: 1rem;
+#foot-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 2rem;
 }
 
-footer img {
-  margin-top: 1rem;
+.copyright p {
+  color: var(--light);
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 0 0 1rem 0;
 }
 
 /*------- Floats --------*/
@@ -148,6 +153,7 @@ footer img {
 
 .logo img {
   height: 30px;
+  padding: 0;
 }
 .foot-style {
   background-color: var(--footerColor);
@@ -216,6 +222,7 @@ footer img {
     justify-content: space-evenly;
     row-gap: 2em;
     column-gap: 2em;
+    align-items: center;
   }
 
   .custom-override {
@@ -300,6 +307,7 @@ footer img {
       justify-content: space-evenly;
       row-gap: 2em;
       column-gap: 2em;
+      align-items: center;
     }
 
     #foot-search {
@@ -313,6 +321,9 @@ footer img {
     #foot-orbit {
       grid-column: 1;
       grid-row: 2;
+    }
+    .copyright p {
+      padding: 0;
     }
 
     /*------------  End Grid Items ------------*/
@@ -382,6 +393,7 @@ footer img {
       grid-template-columns: repeat(4, 1fr);
       row-gap: 2em;
       column-gap: 2em;
+      align-items: center;
     }
 
     #foot-search {
