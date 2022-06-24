@@ -49,11 +49,16 @@ ___________________________________________ */
 	display: none;
 }
 
-.button {
-	margin-top: 1.5rem;
+#button {
+
+	width: 100;
+
 	background-color: var(--lightest);
-	padding: .5rem 2.5rem .5rem 2.5rem;
-}
+	margin: 1rem 10rem 0 10rem;
+	padding: .5rem .5rem .5rem .5rem ;
+	/* align-items: center; */
+	}
+
 
 	.hamburger img {
 		height: 1rem;
@@ -68,6 +73,7 @@ ___________________________________________ */
 
    .social {
 	display: flex;	
+	justify-content: center;
 	/* background-color: var(--lightest); */
 }
 
@@ -98,8 +104,6 @@ ___________________________________________ */
    }
 
    
-	#contact-us {
-	}
 
    input {
 	padding: .6rem 10rem .6rem 1rem;
