@@ -18,7 +18,7 @@ Tags: GRID, Build, Be Awesome
 	margin: 0;
 	padding: 0;
 	font-family: 'Poppins', sans-serif;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 h1, h2, h3, h4, p {
@@ -48,6 +48,8 @@ ___________________________________________ */
    .top-nav {
 	display: none;
 }
+
+
 	.hamburger img {
 		height: 1rem;
 	}
@@ -66,7 +68,12 @@ ___________________________________________ */
 	/* background-color: var(--lightest); */
 }
 
-
+footer {
+	display: grid;
+	justify-items: center;
+	color: var(--light);
+	
+}
 
 	.social img {
 		height: 1rem;
@@ -78,19 +85,24 @@ ___________________________________________ */
 	   background: #000;
    }
 
+   
 
    nav ul {
 	display: flex;
 	list-style-type: none;
-	text-decoration: none;
 	justify-content: center;
    }
 
    nav li a {
 		padding: 2rem;   
-	   color: var(--dark);
+	    color: var(--dark);
    }
-
+   
+   .footer-about  ul li a {
+	/* display: flex; */
+	
+	background-color: #000;
+   }
    /*------- Floats --------*/
 
    .f-left {
@@ -127,6 +139,10 @@ ___________________________________________ */
 	.foot-nav a {
 		font-size: 13px;
 		color: var(--light);
+		
+		
+
+	
 	}
 
 	.site {
