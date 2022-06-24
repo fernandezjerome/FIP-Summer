@@ -310,7 +310,22 @@ ___________________________________________ */
 			row-gap: 2em;
 			column-gap: 2em;
 		}
-
+		
+		#foot-search {
+			grid-column: 1 / span 2;
+			grid-row: 1;
+			}
+			#foot-links  {
+				grid-column: 2;
+				grid-row: 2;
+	
+			}
+			#foot-orbit {
+				grid-column: 1;
+				grid-row: 2;
+				
+			}
+	
 		/*------------  End Grid Items ------------*/
 
 
@@ -376,16 +391,28 @@ ___________________________________________ */
 			column-gap: 2em;
 		}
 
-		.span-grid {
-			grid-column: 1 / span 2;
-	
-		}
 
 		.footer-grid {
 			display: grid;
 			grid-template-columns: repeat(4, 1fr);
 			row-gap: 2em;
 			column-gap: 2em;
+		}
+
+	
+		#foot-search {
+		grid-column: 2 / span 2;
+		grid-row: 1;
+		}
+		#foot-links  {
+			grid-column: 4;
+			grid-row: 1;
+
+		}
+		#foot-orbit {
+			grid-column: 1;
+			grid-row: 1;
+			
 		}
 
 		/*------------  End Grid Items ------------*/
