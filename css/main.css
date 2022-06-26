@@ -20,6 +20,7 @@ body {
   padding: 0;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 h1,
@@ -49,6 +50,11 @@ ___________________________________________ */
 
 .hidden {
   display: none;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
 }
 .top-nav {
   display: none;
@@ -187,6 +193,33 @@ footer {
   .site {
     max-width: none;
   }
+
+  /* -------------------mobile Naviagation------------------ */
+  .primary-navigation {
+    padding-top: 50px;
+    --gap: 3em;
+    position: fixed;
+    z-index: 1000;
+    inset: 67px 30% 100px 0;
+    flex-direction: column;
+    background: rgba(19, 13, 1, 0.4);
+    backdrop-filter: blur(00.5rem);
+    transform: translateX(10%);
+  }
+
+  .primary-navigation [data-visible="false"] {
+    transform: translateX(50%);
+  }
+
+  .mobile-nav-toggle {
+    position: absolute;
+    z-index: 9999;
+  }
+
+  .primary-navigation a > [aria-hidden="false"] {
+    margin-inline-end: 0.75em;
+    /* padding: min(30vh, 10rem) 2em; */
+  }
   /*------------ Mobile Grid Items ------------*/
   .nav-grid {
     display: grid;
@@ -279,6 +312,9 @@ footer {
     }
 
     .top-nav {
+      display: none;
+    }
+    .primary-navigation {
       display: none;
     }
 
@@ -374,7 +410,9 @@ footer {
     .top-nav {
       display: block;
     }
-
+    .mobile-nav-toggle {
+      display: none;
+    }
     .hamburger {
       display: none;
     }
