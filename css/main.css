@@ -203,7 +203,7 @@ footer {
     backdrop-filter: blur(00.1rem);
     /* background-color: var(--footerColor); */
     justify-content: space-evenly;
-    transform: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in; 
   }
 
   .nav-active {
@@ -215,9 +215,13 @@ footer {
   }
 
   .nav-links li {
-    /* opacity: 0; */
+    opacity: 0;
   }
 
+  @keyframes navLinkFade {
+    from { opacity: 0; transform: translateX(-50px)}
+    to { opacity: 1; transform: translateX(0px)}
+  }
   
   /*------------ Mobile Grid Items ------------*/
   .nav-grid {
