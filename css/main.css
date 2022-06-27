@@ -194,7 +194,7 @@ footer {
     display: none;
   }
   .nav-links {
-    transform: translateX(-90%);
+    transform: translateX(-100%);
     display: flex;
     position: absolute;
     left: 0;
@@ -205,18 +205,19 @@ footer {
     justify-content: space-evenly;
     transform: transform 0.5s ease-in;
   }
+
+  .nav-active {
+    transform: translateX(0%);
+}
   .nav-links ul {
     flex-direction: column;
     justify-content: space-around;
   }
 
   .nav-links li {
-    opacity: 0;
+    /* opacity: 0; */
   }
 
-  nav.active {
-    transform: translateX(0%);
-  }
   
   /*------------ Mobile Grid Items ------------*/
   .nav-grid {
@@ -314,6 +315,8 @@ footer {
       display: none;
     }
 
+    
+
     /*------------ Grid Items ------------*/
 
     .head,
@@ -399,6 +402,10 @@ footer {
   }
 
   @media screen and (min-width: 1024px) {
+    .nav-links {
+      display: none;
+    }
+
     .site {
       max-width: none;
     }
