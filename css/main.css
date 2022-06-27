@@ -50,9 +50,7 @@ ___________________________________________ */
 .hidden {
   display: none;
 }
-.top-nav {
-  display: none;
-}
+
 #selected {
   font-weight: 600;
 }
@@ -73,16 +71,19 @@ ___________________________________________ */
   /* align-items: center; */
 }
 
-.hamburger img {
-  height: 1rem;
-}
-
 .nav-grid {
   padding-top: 1rem;
   padding-bottom: 1rem;
   align-items: center;
   justify-items: center;
   background-color: var(--lightest);
+}
+
+.burger div {
+  width: 22px;
+  height: 3px;
+  background-color: var(--dark);
+  margin: 3px;
 }
 
 .social {
@@ -182,11 +183,41 @@ footer {
 /*------- End Mobile Padding ---------*/
 
 @supports (grid-area: auto) {
+  /* ---------mobile navigation -------- */
+
   /*------------ Start Mobile ------------*/
 
   .site {
     max-width: none;
   }
+  .top-nav {
+    display: none;
+  }
+  .nav-links {
+    transform: translateX(-90%);
+    display: flex;
+    position: absolute;
+    left: 0;
+    height: 52vh;
+    width: 50%;
+    top: 80px;
+    background-color: var(--footerColor);
+    justify-content: space-evenly;
+    transform: transform 0.5s ease-in;
+  }
+  .nav-links ul {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  nav.active {
+    transform: translateX(0%);
+  }
+  
   /*------------ Mobile Grid Items ------------*/
   .nav-grid {
     display: grid;
@@ -195,7 +226,8 @@ footer {
   .logo {
     grid-column: 3;
   }
-  .hamburger {
+  .burger {
+    cursor: pointer;
     grid-column: 2;
   }
   .social {
@@ -374,8 +406,11 @@ footer {
     .top-nav {
       display: block;
     }
+    .nav-slide {
+      display: none;
+    }
 
-    .hamburger {
+    .burger {
       display: none;
     }
     /*------------ Grid Items ------------*/
@@ -466,4 +501,16 @@ footer {
   }
 
   /*------------  End Grid Items ------------*/
+}
+
+
+@keyframes nav-LinkFad {
+  from {
+ opacity: 0;
+ transform: translateX(50px); 
+  }
+to {
+  opacity: 1;
+  transform: translateX(0px); 
+}
 }
