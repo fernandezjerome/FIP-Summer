@@ -1,7 +1,7 @@
 /*
 Style Name: CSS GRID Review 
 Description: Class File
-Author: Your Name 
+Author: Jerome B. Fernandez 
 Version: 1.0
 Tags: GRID, Build, Be Awesome
 */
@@ -35,6 +35,7 @@ a {
   text-decoration: none;
 }
 
+
 /* ___________________________________________
        CSS Guide
 ___________________________________________ */
@@ -65,29 +66,25 @@ ___________________________________________ */
   letter-spacing: 0.5rem;
   margin: 1rem 1rem 0 1rem;
   padding: 1%;
-
-  /* align-items: center; */
 }
 
-.nav-grid {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.logo img {
+  height: 30px;
+  padding: 0;
+}
+
+/* ---------------heather stlye------------------ */
+.heather-style {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
   align-items: center;
   justify-items: center;
   background-color: var(--lightest);
 }
 
-.burger div {
-  width: 22px;
-  height: 3px;
-  background-color: var(--dark);
-  margin: 3px;
-}
-
 .social {
   display: flex;
   justify-content: center;
-  /* background-color: var(--lightest); */
 }
 
 .social img {
@@ -112,12 +109,17 @@ nav li a {
   color: var(--dark);
 }
 
+/* ----------------------End of Heather ====================================== */
+
 input {
   padding: 0.6rem 10rem 0.6rem 1rem;
   margin-top: 1rem;
   background-color: #ffffff;
   border: 0;
 }
+
+
+/*   ----------footer -------------- */
 footer {
   text-align: center;
 }
@@ -144,27 +146,6 @@ footer {
   padding: 0 0 1rem 0;
 }
 
-/*------- Floats --------*/
-
-.f-left {
-  float: left;
-}
-
-.f-right {
-  float: right;
-}
-/*------- End Floats --------*/
-
-/*------- Mobile Padding ---------*/
-
-.mobile-padding {
-  display: flex;
-}
-
-.logo img {
-  height: 30px;
-  padding: 0;
-}
 .foot-style {
   background-color: var(--footerColor);
 }
@@ -178,10 +159,22 @@ footer {
   color: var(--light);
 }
 
-/*------- End Mobile Padding ---------*/
+/* ------------end of footer------------ */
 
+/*------- Floats --------*/
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+/*------- End Floats --------*/
+
+
+/*  -------------------Start At Mobile screen--------------------------------- */
 @supports (grid-area: auto) {
-  /* ---------mobile navigation -------- */
 
   /*------------ Start Mobile ------------*/
 
@@ -191,6 +184,15 @@ footer {
   .top-nav {
     display: none;
   }
+  .burger div {
+    width: 24px;
+    height: 3px;
+    background-color: var(--dark);
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+
+  /* Slide Navition */
   .nav-links {
     transform: translateX(-100%);
     display: flex;
@@ -201,27 +203,35 @@ footer {
     top: 80px;
     background: rgba(56, 48, 31, 0.95);
     backdrop-filter: blur(00.1rem);
-    /* background-color: var(--footerColor); */
     justify-content: space-evenly;
     transition: transform 0.5s ease-in; 
   }
-
   .nav-active {
     transform: translateX(0%);
 }
-  .nav-links ul {
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
   .nav-links li {
     opacity: 0;
   }
+  .toggle .line1 { transform: rotate(-45deg) translate(-5px,6px);}
+  .toggle .line2 {opacity: 0;}
+  .toggle .line3 { transform: rotate(45deg) translate(-5px,-6px);}
 
-  @keyframes navLinkFade {
+.nav-links ul {
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+  
+@keyframes navLinkFade {
     from { opacity: 0; transform: translateX(-50px)}
     to { opacity: 1; transform: translateX(0px)}
   }
+
+  .foot-style {
+    padding: 1rem 0 1rem 0;
+  }
+
+
   
   /*------------ Mobile Grid Items ------------*/
   .nav-grid {
@@ -284,7 +294,6 @@ footer {
     display: grid;
     grid-column: 1 / span 2;
     grid-template-columns: 1fr;
-    /* justify-items: center; */
   }
 
   #foot-search {
@@ -303,13 +312,12 @@ footer {
   #button {
     margin-bottom: 1rem;
     margin: 1rem 5rem 1rem 5rem;
-    /* align-items: center; */
   }
 
-  .foot-style {
-    padding: 1rem 0 1rem 0;
-  }
 
+
+
+  /* ------------------- Start Tablet--------------------------- */
   @media screen and (min-width: 768px) {
     .site {
       max-width: none;
@@ -318,7 +326,9 @@ footer {
     .top-nav {
       display: none;
     }
-
+    .nav-links {
+      width: 35%;
+    }
     
 
     /*------------ Grid Items ------------*/
@@ -502,13 +512,11 @@ footer {
     #button {
       margin-bottom: 1rem;
       margin: 1rem 3rem 1rem 3rem;
-      /* align-items: center; */
     }
     .foot-style {
       padding: 3rem 0 3rem 0;
     }
 
-    /* align-items: center; */
   }
 
   /*------------  End Grid Items ------------*/
