@@ -19,13 +19,11 @@
     <a class="hidden" href="#content">Skip to content</a>
 
     <header class="nav-grid">
-      <button
-        class="hamburger mobile-nav-toggle"
-        aria-controls="primary-navigation"
-        aria-expanded="true"
-      >
-        <img src="images/hamburger.svg" alt="" />
-      </button>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
       <div class="logo">
         <img src="images/orbitz_logo.svg" alt="" />
       </div>
@@ -39,6 +37,28 @@
           <li><a href="#">ABOUT</a></li>
         </ul>
       </nav>
+
+
+      <nav class="nav-links">
+        <h3 class="hidden">Main Navigation</h3>
+        <ul>
+          <li><a href="#" id="selected">HOME</a></li>
+          <li><a href="#">SHOP</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">ABOUT</a></li>
+        </ul>
+      </nav>
+
+      <!-- <nav class="nav-links">
+        <h3 class="hidden">Main Navigation</h3>
+        <ul>
+          <li><a href="#" id="selected">HOME</a></li>
+          <li><a href="#">SHOP</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">ABOUT</a></li>
+        </ul>
+      </nav> -->
+
       <nav class="social">
         <img src="images/social-fb.svg" alt="" />
         <img src="images/social-insta.svg" alt="" />
@@ -46,20 +66,8 @@
       </nav>
     </header>
 
-    <nav>
-      <ul data-visible="true" class="primary-navigation flex">
-        <li class="active"><a href="#">HOME</a></li>
-        <li class="active"><a href="#">SHOP</a></li>
-        <li class="active"><a href="#">BLOG</a></li>
-        <li class="active"><a href="#">ABOUT US</a></li>
-        <li class="active"><a href="#">CONTACT US</a></li>
-        <li class="active"><a href="#">INQUARIES</a></li>
-        <li class="active"><a href="#">ORDERS</a></li>
-      </ul>
-    </nav>
-
     <main class="main" id="content">
-      <!-- <section>
+      <section>
         <h2 class="hidden">World News</h2>
         <div class="one-item custom-override">
           <div class="box-model">One Item</div>
@@ -91,7 +99,7 @@
           <div class="box-model"><h3>four item</h3></div>
           <div class="box-model"><h3>four item</h3></div>
         </div>
-      </section> -->
+      </section>
     </main>
 
     <footer class="foot foot-style">
@@ -141,6 +149,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/nav.js" defer></script>
+    <script src="script/main.js"></script>
   </body>
 </html>

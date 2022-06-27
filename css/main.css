@@ -20,7 +20,6 @@ body {
   padding: 0;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  overflow-x: hidden;
 }
 
 h1,
@@ -37,14 +36,12 @@ a {
 }
 
 /* ___________________________________________
-
        CSS Guide
 ___________________________________________ */
 
 /* 01. General Styles                        
    02. CSS Grid                          
 /* _____________________________________
-
    01. General Styles
    _____________________________________ */
 
@@ -52,13 +49,6 @@ ___________________________________________ */
   display: none;
 }
 
-.flex {
-  display: flex;
-  gap: var(--gap, 1rem);
-}
-.top-nav {
-  display: none;
-}
 #selected {
   font-weight: 600;
 }
@@ -79,16 +69,19 @@ ___________________________________________ */
   /* align-items: center; */
 }
 
-.hamburger img {
-  height: 1rem;
-}
-
 .nav-grid {
   padding-top: 1rem;
   padding-bottom: 1rem;
   align-items: center;
   justify-items: center;
   background-color: var(--lightest);
+}
+
+.burger div {
+  width: 22px;
+  height: 3px;
+  background-color: var(--dark);
+  margin: 3px;
 }
 
 .social {
@@ -188,38 +181,44 @@ footer {
 /*------- End Mobile Padding ---------*/
 
 @supports (grid-area: auto) {
+  /* ---------mobile navigation -------- */
+
   /*------------ Start Mobile ------------*/
 
   .site {
     max-width: none;
   }
-
-  /* -------------------mobile Naviagation------------------ */
-  .primary-navigation {
-    padding-top: 50px;
-    --gap: 3em;
-    position: fixed;
-    z-index: 1000;
-    inset: 67px 30% 100px 0;
-    flex-direction: column;
-    background: rgba(19, 13, 1, 0.4);
-    backdrop-filter: blur(00.5rem);
-    transform: translateX(10%);
+  .top-nav {
+    display: none;
   }
-
-  .primary-navigation [data-visible="false"] {
-    transform: translateX(50%);
-  }
-
-  .mobile-nav-toggle {
+  .nav-links {
+    transform: translateX(-100%);
+    display: flex;
     position: absolute;
-    z-index: 9999;
+    left: 0;
+    height: 52vh;
+    width: 50%;
+    top: 80px;
+    background: rgba(56, 48, 31, 0.95);
+    backdrop-filter: blur(00.1rem);
+    /* background-color: var(--footerColor); */
+    justify-content: space-evenly;
+    transform: transform 0.5s ease-in;
   }
 
-  .primary-navigation a > [aria-hidden="false"] {
-    margin-inline-end: 0.75em;
-    /* padding: min(30vh, 10rem) 2em; */
+  .nav-active {
+    transform: translateX(0%);
+}
+  .nav-links ul {
+    flex-direction: column;
+    justify-content: space-around;
   }
+
+  .nav-links li {
+    /* opacity: 0; */
+  }
+
+  
   /*------------ Mobile Grid Items ------------*/
   .nav-grid {
     display: grid;
@@ -228,7 +227,8 @@ footer {
   .logo {
     grid-column: 3;
   }
-  .hamburger {
+  .burger {
+    cursor: pointer;
     grid-column: 2;
   }
   .social {
@@ -314,9 +314,8 @@ footer {
     .top-nav {
       display: none;
     }
-    .primary-navigation {
-      display: none;
-    }
+
+    
 
     /*------------ Grid Items ------------*/
 
@@ -403,6 +402,10 @@ footer {
   }
 
   @media screen and (min-width: 1024px) {
+    .nav-links {
+      display: none;
+    }
+
     .site {
       max-width: none;
     }
@@ -410,10 +413,11 @@ footer {
     .top-nav {
       display: block;
     }
-    .mobile-nav-toggle {
+    .nav-slide {
       display: none;
     }
-    .hamburger {
+
+    .burger {
       display: none;
     }
     /*------------ Grid Items ------------*/
@@ -504,4 +508,16 @@ footer {
   }
 
   /*------------  End Grid Items ------------*/
+}
+
+
+@keyframes nav-LinkFad {
+  from {
+ opacity: 0;
+ transform: translateX(50px); 
+  }
+to {
+  opacity: 1;
+  transform: translateX(0px); 
+}
 }
