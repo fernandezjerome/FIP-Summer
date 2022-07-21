@@ -19,7 +19,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
+  background-image: url("../images/gradient-2.svg");
+  background-repeat: no-repeat;
+ 
+  background-size: cover; 
 }
 
 h1,
@@ -54,6 +58,22 @@ ___________________________________________ */
   font-weight: 600;
 }
 
+.glass-effect {
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255,255,255,0.7),
+    rgba(255,255,255,0.3));
+    backdrop-filter: blur(2rem);
+ }
+
+ .div-container {
+  border-width: 1px;
+  border-radius: 2rem;
+  border-style: solid;
+  border-color: white;
+ }
+
 #selected2 {
   font-weight: 700;
 }
@@ -79,7 +99,9 @@ ___________________________________________ */
   padding-bottom: .5rem;
   align-items: center;
   justify-items: center;
-  background-color: var(--lightest);
+  border-bottom: 1px solid rgb(255, 255, 255);
+
+  margin-bottom: 1rem;
 }
 
 .social {
@@ -147,7 +169,8 @@ footer {
 }
 
 .foot-style {
-  background-color: var(--footerColor);
+  border-top: 1px solid rgb(255, 255, 255);
+
 }
 
 .foot-style ul {
@@ -199,8 +222,9 @@ footer {
     position: absolute;
     left: 0;
     height: 52vh;
+    
     width: 50%;
-    top: 80px;
+    top: 64px;
     background: rgba(56, 48, 31, 0.95);
     backdrop-filter: blur(00.1rem);
     justify-content: space-evenly;
