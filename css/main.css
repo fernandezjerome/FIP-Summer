@@ -1,36 +1,35 @@
-/*
-Style Name: CSS GRID Review 
-Description: Class File
-Author: Jerome B. Fernandez 
-Version: 1.0
-Tags: GRID, Build, Be Awesome
-*/
-
 :root {
-  --lightest: #f7f4e9;
-  --light: #bcad8f;
-  --dark: #ac9567;
-  --footerColor: #706654;
-  --darkest: #845904;
+  --darkblue: #0C5E66;
+  --lightblue: #239EAA;
+  --orange: #FFA700;
+  --green: #D5EE46;
+  --purple: #8863BB;
+  --ff-primary: "Poppins", sans-serif;
+  --ff-body: var(--ff-primary);
+  --ff-heading:var(--ff-primary);
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+  --fw-italic: 400 Italic;
+  --fs-h2: 2.5rem;
+  --fs-h3: 1.56rem;
+  --fs-h4: .9rem;
+  --fs-pharagraph: .8rem;
 }
 
 /* reset */
 body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--ff-primary);
   font-size: 16px;
   background-image: url("../images/gradient-2.svg");
   background-repeat: no-repeat;
- 
-  background-size: cover; 
+
+  background-size: cover;
 }
 
-h1,
-h2,
-h3,
-h4,
-p {
+h1,h2,h3,h4, p {
   margin: 0;
   padding: 0;
 }
@@ -38,7 +37,6 @@ p {
 a {
   text-decoration: none;
 }
-
 
 /* ___________________________________________
        CSS Guide
@@ -54,39 +52,51 @@ ___________________________________________ */
   display: none;
 }
 
+
+
+
+.buttonStyle {
+  padding-top: 6px;
+  border: 0;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #f0fae8;
+}
+
+.hover1:hover { background-color:var(--orange)}
+.hover2:hover { background-color:var(--green)}
+.hover3:hover { background-color:var(--purple)}
+
+
+
+
 #selected {
   font-weight: 600;
 }
 
 .glass-effect {
+  
   background: white;
   background: linear-gradient(
     to right bottom,
-    rgba(255,255,255,0.7),
-    rgba(255,255,255,0.3));
-    backdrop-filter: blur(2rem);
- }
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  backdrop-filter: blur(2rem);
+}
 
- .div-container {
+.glass-corner {
   border-width: 1px;
-  border-radius: 2rem;
+  border-radius: .95rem;
   border-style: solid;
   border-color: white;
- }
+}
 
 #selected2 {
   font-weight: 700;
 }
 
-#button {
-  background-color: var(--lightest);
-  font-weight: 500;
-  color: var(--darkest);
-  font-size: 0.7rem;
-  letter-spacing: 0.5rem;
-  margin: 1rem 1rem 0 1rem;
-  padding: 1%;
-}
+
 
 .logo img {
   height: 30px;
@@ -95,8 +105,8 @@ ___________________________________________ */
 
 /* ---------------heather stlye------------------ */
 .heather-style {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   align-items: center;
   justify-items: center;
   border-bottom: 1px solid rgb(255, 255, 255);
@@ -140,7 +150,6 @@ input {
   border: 0;
 }
 
-
 /*   ----------footer -------------- */
 footer {
   text-align: center;
@@ -170,7 +179,6 @@ footer {
 
 .foot-style {
   border-top: 1px solid rgb(255, 255, 255);
-
 }
 
 .foot-style ul {
@@ -184,6 +192,70 @@ footer {
 
 /* ------------end of footer------------ */
 
+/* ---------------------main page stlye */
+
+.dynamic-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 1rem;
+}
+
+.dynamic-copy h3 {
+font-weight: var(--fw-regular);
+font-size: var(--fs-h3);
+color: var(--darkblue);
+}
+
+.dynamic-copy h2 {
+  line-height: 2.5rem;
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-h2);
+  color: var(--darkblue);
+  }
+
+  .dynamic-copy h4 {
+    line-height: 2.5rem;
+    font-weight: var(--fw-bond);
+    font-size: var(--fs-h4);
+    color: var(--lightblue);
+    }
+
+    .dynamic-copy p {
+      font-style: italic;
+      line-height: 1rem;
+      font-size: var(--fs-pharagraph);
+      color: var(--lightblue);
+      }
+
+      .dynamic-copy span {
+        font-weight: var(--fw-bold);
+      }
+  
+
+
+.dynamic-images {
+  display: flex;
+  align-items: center;
+}
+
+.dynamic-size {
+  height: 1000px;
+  margin: 60px 0 60px 0;
+}
+
+.dynamic-buttons {
+  display: flex;
+  flex: start;
+  justify-content: space-around
+
+
+}
+
+
+
+/* -------------------------end of main page */
+
 /*------- Floats --------*/
 
 .f-left {
@@ -195,10 +267,8 @@ footer {
 }
 /*------- End Floats --------*/
 
-
 /*  -------------------Start At Mobile screen--------------------------------- */
 @supports (grid-area: auto) {
-
   /*------------ Start Mobile ------------*/
 
   .site {
@@ -210,7 +280,7 @@ footer {
   .burger div {
     width: 24px;
     height: 3px;
-    background-color: var(--dark);
+    background-color: var(--lightblue);
     margin: 5px;
     transition: all 0.3s ease;
   }
@@ -222,41 +292,49 @@ footer {
     position: absolute;
     left: 0;
     height: 52vh;
-    
     width: 50%;
     top: 64px;
     background: rgba(56, 48, 31, 0.95);
     backdrop-filter: blur(00.1rem);
     justify-content: space-evenly;
-    transition: transform 0.5s ease-in; 
+    transition: transform 0.5s ease-in;
   }
   .nav-active {
     transform: translateX(0%);
-}
+  }
   .nav-links li {
     opacity: 0;
   }
-  .toggle .line1 { transform: rotate(-45deg) translate(-5px,6px);}
-  .toggle .line2 {opacity: 0;}
-  .toggle .line3 { transform: rotate(45deg) translate(-5px,-6px);}
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
 
-.nav-links ul {
-  flex-direction: column;
-  justify-content: space-around;
-}
+  .nav-links ul {
+    flex-direction: column;
+    justify-content: space-around;
+  }
 
-  
-@keyframes navLinkFade {
-    from { opacity: 0; transform: translateX(-50px)}
-    to { opacity: 1; transform: translateX(0px)}
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
   }
 
   .foot-style {
     padding: 1rem 0 1rem 0;
   }
 
-
-  
   /*------------ Mobile Grid Items ------------*/
   .nav-grid {
     display: grid;
@@ -339,22 +417,21 @@ footer {
     /* align-items: center; */
   }
 
-
-
-
   /* ------------------- Start Tablet--------------------------- */
   @media screen and (min-width: 768px) {
     .site {
       max-width: none;
     }
-
+    
+    .dynamic-size {
+      height: 500px;
+    }
     .top-nav {
       display: none;
     }
     .nav-links {
       width: 35%;
     }
-    
 
     /*------------ Grid Items ------------*/
 
@@ -441,6 +518,15 @@ footer {
   }
 
   @media screen and (min-width: 1024px) {
+
+/* start main page */
+
+.dynamic-size {
+  height: 500px;
+}
+
+/* end main page */
+
     .nav-links {
       display: none;
     }
@@ -549,14 +635,13 @@ footer {
   /*------------  End Grid Items ------------*/
 }
 
-
 @keyframes nav-LinkFad {
   from {
- opacity: 0;
- transform: translateX(50px); 
+    opacity: 0;
+    transform: translateX(50px);
   }
-to {
-  opacity: 1;
-  transform: translateX(0px); 
-}
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }

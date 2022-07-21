@@ -4,12 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  
     <link href="css/main.css" rel="stylesheet" type="text/css" />
 
     <title>Box Model</title>
@@ -17,7 +15,6 @@
   <body class="site">
     <h1 class="hidden">Grid Sandbox</h1>
     <a class="hidden" href="#content">Skip to content</a>
-  
 
     <header class="nav-grid heather-style glass-effect">
       <div class="burger">
@@ -39,7 +36,6 @@
         </ul>
       </nav>
 
-
       <nav class="nav-links">
         <h3 class="hidden">Main Navigation</h3>
         <ul>
@@ -50,8 +46,6 @@
         </ul>
       </nav>
 
-
-
       <nav class="social">
         <img src="images/social-fb.svg" alt="" />
         <img src="images/social-insta.svg" alt="" />
@@ -60,39 +54,46 @@
     </header>
 
     <main class="main" id="content">
-      <section>
-        <h2 class="hidden">World News</h2>
-        <div class="one-item custom-override">
-          <div class="glass-effect div-container">One Item</div>
-        </div>
-      </section>
 
-      <section>
+      <section">
         <h2 class="hidden">Videos</h2>
-        <div class="two-items test">
-          <div class="box-model">Two Item</div>
-          <div class="box-model">Two Item</div>
+        <div class="two-items glass-effect glass-corner dynamic-size">
+          <div class="dynamic-copy">
+          
+            <div>
+              <h3>DISCOVER</h2>
+              <h2><span> FRUIT DRINK</span> <br>with a Twist!</h3>
+            </div>
+            
+            <div class="teamInfo">
+              <h3>ORBITZ New Flavors</h3> 
+              <h4>all flavors details </h4>
+              <p class="detail"> Our Drink has some extra flavors.
+                Citrus raspberry, blueberry melon, and vanilla orange With more juice and textures.
+                Trust in quality and quantity. It's simple.</p>
+            </div>
+            
+            <div>
+              <button>WATCH VIDEO</button>
+            </div>
+          </div>
+        
+        <div class="dynamic-images">
+            <div>
+              <div>
+                <img id = "defaultImg" src="images/dynamic-main-img.jpg" alt="">
+              </div>
+              <div class="dynamic-buttons bioSwitcher">
+                <div><button id="profileVanilla" class="buttonStyle hover1" data-arrayref="0"><img src="images/dynamic-button1.jpg"></button></div>
+                <div><button id="profileCitrus" class="buttonStyle hover2" data-arrayref="1"><img src="images/dynamic-button2.jpg"></button></div>
+                <div><button id="profileMelon" class="buttonStyle hover3" data-arrayref="2"><img src="images/dynamic-button3.jpg"></button></div>                   
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section>
-        <h2 class="hidden">Local News</h2>
-        <div class="three-items custom-override">
-          <div class="box-model"><h3>Three item</h3></div>
-          <div class="box-model"><h3>Three item</h3></div>
-          <div class="box-model"><h3>Three item</h3></div>
-        </div>
-      </section>
 
-      <section>
-        <h2 class="hidden">Local News</h2>
-        <div class="four-items custom-override">
-          <div class="box-model"><h3>four-items item</h3></div>
-          <div class="box-model"><h3>four item</h3></div>
-          <div class="box-model"><h3>four item</h3></div>
-          <div class="box-model"><h3>four item</h3></div>
-        </div>
-      </section>
     </main>
 
     <footer class="foot foot-style glass-effect">
@@ -129,7 +130,7 @@
         </div>
         <div id="foot-orbit">
           <nav class="logo">
-            <img src="images/orbitz_logo2.svg" alt="orbitz logo" />
+            <img src="images/orbitz_logo.svg" alt="orbitz logo" />
           </nav>
           <div class="social">
             <img src="images/social-fb.svg" alt="Facebook Address" />
