@@ -4,141 +4,201 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <link href="css/main.css" rel="stylesheet" type="text/css" />
-    <title>Box Model</title>
+    <title>Oribz Rebrand</title>
   </head>
   <body class="site">
-	<div class="circle"></div>
-	<h1 class="hidden">Grid Sandbox</h1>
-	<a class="hidden" href="#content">Skip to content</a>
-	
-	<header class="nav-grid heather-style glass-effect">
-		<div class="burger">
-			<div class="line1"></div>
-			<div class="line2"></div>
-			<div class="line3"></div>
-		</div>
-		<div class="logo">
-			<img src="images/orbitz_logo.svg" alt="" />
-		</div>
-		<nav class="top-nav" aria-label="Main Navigation">
-			<h3 class="hidden">Main Navigation</h3>	
-			<ul>
-				<li><a href="index.html" id="selected">HOME</a></li>
-				<li><a href="#">SHOP</a></li>
-				<li><a href="#">BLOG</a></li>
-				<li><a href="#">ABOUT</a></li>
-			</ul>
-      	</nav>		
-		<nav class="social">
-			<img src="images/social-fb.svg" alt="" />
-			<img src="images/social-insta.svg" alt="" />
-			<img src="images/social-twitter.svg" alt="" />
-		</nav>
-	</header>
-	
-	<main class="main" id="content">
+    <div class="circle"></div>
+    <h1 class="hidden">Orbitz Rebrand</h1>
+    <a class="hidden" href="#content">Skip to content</a>
+
+    <header class="nav-grid heather-style glass-effect">
+      <h2 class="hidd">Heather</h2>
+      <div class="burger">
+        <h3 class="hidden">Hamburger Menu</h3>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <div class="logo">
+        <h3 class="hidd">Orbitz logo</h3>
+        <img src="images/orbitz_logo.svg" alt="orbitz logo" />
+      </div>
+      <nav class="top-nav" aria-label="Main Navigation">
+        <h3 class="hidden">Main Navigation</h3>
+        <ul>
+          <li><a href="index.html" class="selected">HOME</a></li>
+          <li><a href="shot.html">SHOP</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+        </ul>
+      </nav>
+      <nav class="social">
+        <h3 class="hidden">social links</h3>
+        <img src="images/social-fb.svg" alt="facebook logo" />
+        <img src="images/social-insta.svg" alt="intagram logo" />
+        <img src="images/social-twitter.svg" alt="twitter logo" />
+      </nav>
+    </header>
+
+    <main class="main" id="content">
       <!-- I put this slide navigation here, for some reason x index wont work -->
-	<div>
-		<nav class="nav-links glass-corner ">
-			<h3 class="hidden">Main Navigation</h3>
-			<ul>
-				<li><a href="#" id="selected">HOME</a></li>
-				<li><a href="#">SHOP</a></li>
-				<li><a href="#">BLOG</a></li>
-				<li><a href="#">ABOUT</a></li>
-			</ul>
-		</nav>
-	</div>
+      <div>
+        <nav class="nav-links glass-corner">
+          <h3 class="hidden">Mobile Navigation</h3>
+          <ul>
+            <li><a href="index.html" class="selected">HOME</a></li>
+            <li><a href="shop.html">SHOP</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+          </ul>
+        </nav>
+      </div>
 
       <section class="section-padding">
-        <h2 class="hidden">Videos</h2>
+        <h2 class="hidden">Dynamic Section</h2>
         <div class="two-items glass-effect glass-corner dynamic-size">
-          <div class="dynamic-copy">
+          <div class="section-style">
             <div>
-              <h4 class="yellow-padding">DISCOVER</h4>
-              <h2><span> FRUIT DRINK</span> <br>with a Twist!</h3>
+              <h5>DISCOVER</h5>
+              <h2><span> FRUIT DRINK</span> <br />with a Twist!</h2>
             </div>
-            
             <div class="teamInfo">
-              <h3>ORBITZ New Flavors</h3> 
-              <h4>Three healthy flavors </h4>
-              <p class="detail"> Our Drink has some extra flavors.
-                Citrus raspberry, blueberry melon, and vanilla orange With more juice and textures.
-                Trust in quality and quantity. It's simple.</p>
-                <button class="custom-btn">WATCH DEMO</button>                
+              <h3>Orbitz New Flavors</h3>
+              <h4>Three healthy flavors</h4>
+              <p class="detail">
+                Our Drink has some extra flavors. Citrus raspberry, blueberry,
+                melon, and vanilla orange With more juice and textures. Trust in
+                quality and quantity. It's simple.
+              </p>
+              <button class="custom-btn">WATCH DEMO</button>
             </div>
           </div>
-        
-        <div class="dynamic-images">
+          <div class="dynamic-images">
             <div>
               <div>
-                <img id = "defaultImg" src="images/dynamic-main-img.jpg" alt="">
+                <img
+                  id="defaultImg"
+                  src="images/dynamic-main-img.jpg"
+                  alt="main image"
+                />
               </div>
               <div class="dynamic-buttons bioSwitcher">
-                <div><button id="profileVanilla" class="buttonStyle hover1" data-arrayref="0"><img src="images/dynamic-button1.jpg"></button></div>
-                <div><button id="profileCitrus" class="buttonStyle hover2" data-arrayref="1"><img src="images/dynamic-button2.jpg"></button></div>
-                <div><button id="profileMelon" class="buttonStyle hover3" data-arrayref="2"><img src="images/dynamic-button3.jpg"></button></div>                   
+                <div>
+                  <button
+                    id="profileVanilla"
+                    class="buttonStyle hover1"
+                    data-arrayref="0"
+                  >
+                    <img
+                      src="images/dynamic-button1.jpg"
+                      alt="dynamic button 1"
+                    />
+                  </button>
+                </div>
+                <div>
+                  <button
+                    id="profileCitrus"
+                    class="buttonStyle hover2"
+                    data-arrayref="1"
+                  >
+                    <img
+                      src="images/dynamic-button2.jpg"
+                      alt="dynamic button 2"
+                    />
+                  </button>
+                </div>
+                <div>
+                  <button
+                    id="profileMelon"
+                    class="buttonStyle hover3"
+                    data-arrayref="2"
+                  >
+                    <img
+                      src="images/dynamic-button3.jpg"
+                      alt="dynamic button 3"
+                    />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div> 
+        </div>
       </section>
 
+      <section class="section-style section-padding">
+        <h2 class="hidden">New section</h2>
+        <div class="two-items glass-effect glass-corner">
+          <div>
+            <h4>Breaking News</h4>
+            <h3>Nutritionist Approved</h3>
+            <p>
+              We are not just a cold pressed juice company or a simple diet.
+              Clearlyl Canadians.co was founded with the intent of empowering
+              our clients to live the fullest by helping them modify their
+              lifestyle with healthy changes rather than substituting with only
+              juices.
+            </p>
+            <button class="custom-btn">READ MORE</button>
+          </div>
+          <div>
+            <img src="images/nutrition-approve.jpg" alt="nutrition Approved" />
+          </div>
+        </div>
+      </section>
 
-		<section class="section-style">
-			<div class="two-items glass-effect glass-corner">
-				<div>
-					<h4>Breaking News</h4>
-					<h3>Nutritionist Approved</h3>
-					<p>We are not just a cold pressed juice company or a simple diet. Clearlyl Canadians.co was founded with the intent of empowering our clients to live the fullest by helping them modify their lifestyle with healthy changes rather than substituting with only juices.</p>
-					<button class="custom-btn">READ MORE</button>
-				</div>
-				<div> <img src="images/nutrition-approve.jpg" alt=""></div>
-			</div>
-		</section>
+      <section class="section-style section-padding">
+        <h2 class="hidden">Choice Section</h2>
+        <div class="two-items glass-effect glass-corner">
+          <div><img src="images/fresh-spirits.jpg" alt="fresh spirits" /></div>
+          <div>
+            <h4>peoples Choice</h4>
+            <h3>Canadian's Finest Choice</h3>
+            <p>
+              Clearly Canadian is a brand of premium flavored and unflavored
+              sparkling and spring water, that is produced by The Clearly Food &
+              Beverage Company Ltd., of Canada. The brand was founded in 1987.
+              In British Columbia, Canada. Outside of Canada, it is well known
+              throughout the United States, parts of Europe, and Japan.
+            </p>
+            <button class="custom-btn">READ MORE</button>
+          </div>
+        </div>
+      </section>
 
-		<section class="section-style">
-			<div class="two-items glass-effect glass-corner">
-				<div> <img src="images/fresh-spirits.jpg" alt=""></div>
-				<div>
-					<h4>peoples Choice</h4>
-					<h3>Canadian's Finest Choice</h3>
-					<p>Clearly Canadian is a brand of premium flavored and unflavored sparkling and spring water, that is produced by The Clearly Food & Beverage Company Ltd., of Canada. The brand was founded in 1987.
-						In British Columbia, Canada. Outside of Canada, it is well known throughout the United States, parts of Europe, and Japan.</p>
-					<button class="custom-btn">READ MORE</button>
-				</div>
-				
-			</div>
-		</section>
+      <section class="section-style section-padding">
+        <div class="two-items glass-effect glass-corner">
+          <div>
+            <h4>Trending Blog</h4>
+            <h3>We are Professional Creative Team</h3>
+            <p>
+              We are not just a cold pressed juice company or a simple diet.
+              Clearlye intent of empowering our cliefy their lifestyle with
+              healthy changes rather than substituting with only juices.
+            </p>
+            <button class="custom-btn">READ MORE</button>
+          </div>
+          <div class="trending-image">
+            <img src="images/trending-blog.jpg" alt="" />
+          </div>
+        </div>
+      </section>
 
-		<section class="section-style">
-			<div class="two-items glass-effect glass-corner ">
-				<div>
-					<h4>Breaking News</h4>
-					<h3>Nutritionist Approved</h3>
-					<p>We are not just a cold pressed juice company or a simple diet. Clearlyl Canadians.co was founded with the intent of empowering our clients to live the fullest by helping them modify their lifestyle with healthy changes rather than substituting with only juices.</p>
-					<button class="custom-btn">READ MORE</button>
-				</div>
-				<div class="trending-image"> <img src="images/trending-blog.jpg" alt=""></div>
-			</div>
-		</section>
-
-		<section class="partners ">
-
-			<div class="four-items glass-effect glass-corner ">
-				<img src="images/partner-01.svg" alt="">
-				<img src="images/partner-02.svg" alt="">
-				<img src="images/partner-03.svg" alt="">
-				<img src="images/partner-04.svg" alt="">
-			</div>
-		</section>
-
-
-
+      <section class="partners">
+        <h2 class="hidden">Partners</h2>
+        <div class="four-items glass-effect glass-corner">
+          <img src="images/partner-01.svg" alt="partner 1 logo" />
+          <img src="images/partner-02.svg" alt="partner 2 logo" />
+          <img src="images/partner-03.svg" alt="partner 3 logo" />
+          <img src="images/partner-04.svg" alt="partner 4 logo" />
+        </div>
+      </section>
     </main>
 
     <footer class="foot foot-style glass-effect">
@@ -147,10 +207,10 @@
           <div>
             <nav>
               <ul>
-                <li><a href="#" id="selected2">HOME</a></li>
-                <li><a href="#">SHOP</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#">ABOUT</a></li>
+                <li><a href="index.html" id="selected2">HOME</a></li>
+                <li><a href="shot.html">SHOP</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
               </ul>
             </nav>
 
@@ -161,16 +221,16 @@
             </form>
           </div>
           <div id="button">
-            <p>CONTACT</p>
+            <button class="custom-btn">CONTACT</button>
           </div>
         </div>
         <div id="foot-links">
           <ul>
-            <li><a href="#" id="selected2">ABOUT</a></li>
-            <li><a href="#">The Distelery</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Media Inquaries</a></li>
-            <li><a href="#">Orders</a></li>
+            <li><a href="about.html" class="selected2">ABOUT</a></li>
+            <li><a href="shop.html">The Distelery</a></li>
+            <li><a href="about.html">Contact</a></li>
+            <li><a href="about.html">Media Inquaries</a></li>
+            <li><a href="shop.html">Orders</a></li>
           </ul>
         </div>
         <div id="foot-orbit">

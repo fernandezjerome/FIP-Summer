@@ -39,6 +39,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p {
   margin: 0;
   padding: 0;
@@ -62,21 +63,39 @@ ___________________________________________ */
    _____________________________________ */
 
 .section-style h3,
+h2,
 h4,
+h5,
 p {
   color: var(--darkblue);
   padding: 0 1rem 0 1rem;
 }
 
-.section-style {
-  margin: 0.5rem;
+.section-padding {
+  padding: 1rem;
 }
+
+.section-style h2 {
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-h2);
+  line-height: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-style span {
+  font-weight: var(--fw-bold);
+}
+
 .section-style h3 {
   font-size: var(--fs-h3);
   font-weight: var(--fw-semi-bold);
 }
 
 .section-style h4 {
+  text-transform: uppercase;
+}
+
+.section-style h5 {
   text-transform: uppercase;
   margin-top: 3rem;
 }
@@ -86,6 +105,10 @@ p {
   height: 400px;
   object-fit: cover;
   /* object-position: right; */
+}
+
+.section-style p {
+  font-size: var(--fs-pharagraph);
 }
 .trending-image img {
   object-position: right;
@@ -110,8 +133,18 @@ p {
   background: white;
 }
 
-#selected {
-  font-weight: 600;
+header li {
+  border-bottom: #54b1ee;
+}
+header a {
+  font-weight: var(--fw-semi-bold);
+}
+header a:hover {
+  color: var(--lightblue);
+}
+
+.selected {
+  padding: 0.5rem 2rem 0.5rem 2rem;
 }
 
 .glass-effect {
@@ -135,7 +168,7 @@ p {
   border-color: white;
 }
 
-#selected2 {
+.selected2 {
   font-weight: 700;
 }
 
@@ -277,44 +310,6 @@ footer {
 }
 .hover3:hover {
   background-color: var(--purple);
-}
-
-.dynamic-copy {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin-left: 1rem;
-}
-
-.dynamic-copy h3 {
-  font-weight: var(--fw-regular);
-  font-size: var(--fs-h3);
-  color: var(--darkblue);
-}
-
-.dynamic-copy h2 {
-  line-height: 2.5rem;
-  font-weight: var(--fw-semi-bold);
-  font-size: var(--fs-h2);
-  color: var(--darkblue);
-}
-
-.dynamic-copy h4 {
-  line-height: 2.5rem;
-  font-weight: var(--fw-semi-bold);
-  font-size: var(--fs-h4);
-  color: var(--lightblue);
-}
-
-.dynamic-copy p {
-  font-weight: var(--fw-regular);
-  line-height: 1rem;
-  font-size: var(--fs-pharagraph);
-  color: var(--lightblue);
-}
-
-.dynamic-copy span {
-  font-weight: var(--fw-bold);
 }
 
 .dynamic-buttons {
@@ -513,6 +508,10 @@ footer {
   @media screen and (min-width: 768px) {
     .site {
       max-width: none;
+    }
+
+    .section-style h5 {
+      margin-top: 0;
     }
 
     .dynamic-size {
