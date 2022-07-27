@@ -1,11 +1,12 @@
 :root {
-  --darkblue: #0C5E66;
-  --lightblue: #239EAA;
+  --darkblue: #0E3650;
+  --lightblue: #54B1EE;
+  --yellow: #FFE500;
   --orange: #FFA700;
   --green: #D5EE46;
   --purple: #8863BB;
   --ff-primary: "Poppins", sans-serif;
-  --ff-body: var(--ff-primary);
+  --ff-body: var(--ff-primary); 
   --ff-heading:var(--ff-primary);
   --fw-regular: 400;
   --fw-semi-bold: 500;
@@ -16,6 +17,10 @@
   --fs-h4: .9rem;
   --fs-pharagraph: .8rem;
 }
+.hidden {
+  display: none;
+}
+
 
 /* reset */
 body {
@@ -23,10 +28,13 @@ body {
   padding: 0;
   font-family: var(--ff-primary);
   font-size: 16px;
+  
   background-image: url("../images/gradient-2.svg");
   background-repeat: no-repeat;
 
   background-size: cover;
+  /* height: 100vh; */
+
 }
 
 h1,h2,h3,h4, p {
@@ -43,31 +51,32 @@ a {
 ___________________________________________ */
 
 /* 01. General Styles                        
+
+
+
    02. CSS Grid                          
 /* _____________________________________
    01. General Styles
    _____________________________________ */
 
-.hidden {
-  display: none;
-}
+   .custom-btn {
+    color: #fff;
+    border-radius: 9px;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: var(--fw-semi-bold);
+    letter-spacing : 3px;
+    background: linear-gradient(0deg, #2F8EC5 0%, #185372 100%);
+    border: none;
+  }
 
 
-
-
-.buttonStyle {
-  padding-top: 6px;
-  border: 0;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  background-color: #f0fae8;
-}
-
-.hover1:hover { background-color:var(--orange)}
-.hover2:hover { background-color:var(--green)}
-.hover3:hover { background-color:var(--purple)}
-
-
+  
+  .custom-btn:hover {
+    color: var(--darkblue);
+    background: white;
+  }
 
 
 #selected {
@@ -75,21 +84,24 @@ ___________________________________________ */
 }
 
 .glass-effect {
-  
+  z-index: 1;
   background: white;
   background: linear-gradient(
     to right bottom,
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.3)
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1)
   );
-  backdrop-filter: blur(2rem);
+  backdrop-filter: blur(1rem);
+  
 }
 
 .glass-corner {
+  margin: 20px 0 20px 0;
   border-width: 1px;
   border-radius: .95rem;
   border-style: solid;
   border-color: white;
+
 }
 
 #selected2 {
@@ -97,11 +109,53 @@ ___________________________________________ */
 }
 
 
-
 .logo img {
   height: 30px;
   padding: 0;
 }
+
+.yellow-padding {
+}
+
+.yellow-padding h4 {
+  color: #0C5E66;
+  background-color: #8863BB;
+}
+
+
+
+/* backgound animation */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+}
+.circle:nth-child(1) {
+  background: #ffffff;
+  top: 63%;
+  left: 43%;
+  width: 45px;
+  height: 45px;
+  opacity: 0.3;
+  -webkit-animation: float1 20s infinite linear;
+          animation: float1 20s infinite linear;
+}
+
+
+@keyframes float1 {
+  40% {
+    -webkit-transform: translateX(20px) translateY(62px);
+            transform: translateX(20px) translateY(62px);
+  }
+  80% {
+    -webkit-transform: translateX(148px) translateY(37px);
+            transform: translateX(148px) translateY(37px);
+  }
+}
+
+
+
+
+
 
 /* ---------------heather stlye------------------ */
 .heather-style {
@@ -111,7 +165,7 @@ ___________________________________________ */
   justify-items: center;
   border-bottom: 1px solid rgb(255, 255, 255);
 
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 .social {
@@ -193,6 +247,22 @@ footer {
 /* ------------end of footer------------ */
 
 /* ---------------------main page stlye */
+.buttonStyle {
+  padding-top: 6px;
+  border: 0;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #f0fae8;
+}
+
+.hover1:hover { background-color:var(--orange)}
+.hover2:hover { background-color:var(--green)}
+.hover3:hover { background-color:var(--purple)}
+
+
+.section-padding{
+  margin: .5rem;
+}
 
 .dynamic-copy {
   display: flex;
@@ -216,41 +286,40 @@ color: var(--darkblue);
 
   .dynamic-copy h4 {
     line-height: 2.5rem;
-    font-weight: var(--fw-bond);
+    font-weight: var(--fw-semi-bold);
     font-size: var(--fs-h4);
     color: var(--lightblue);
+     
+
+
     }
 
-    .dynamic-copy p {
-      font-style: italic;
+  .dynamic-copy p {
+    font-weight: var(--fw-regular);
       line-height: 1rem;
       font-size: var(--fs-pharagraph);
       color: var(--lightblue);
       }
 
-      .dynamic-copy span {
+  .dynamic-copy span {
         font-weight: var(--fw-bold);
-      }
+}
   
 
-
-.dynamic-images {
-  display: flex;
-  align-items: center;
-}
-
-.dynamic-size {
-  height: 1000px;
-  margin: 60px 0 60px 0;
-}
 
 .dynamic-buttons {
   display: flex;
   flex: start;
   justify-content: space-around
 
+}
+
+.nutrition-approve img{
+padding: 1rem 0 1rem 0;
 
 }
+
+
 
 
 
@@ -276,6 +345,8 @@ color: var(--darkblue);
   }
   .top-nav {
     display: none;
+    color: var(--darkblue);
+    font-size: var(--fs-h4);
   }
   .burger div {
     width: 24px;
@@ -290,6 +361,7 @@ color: var(--darkblue);
     transform: translateX(-100%);
     display: flex;
     position: absolute;
+    z-index: 98;
     left: 0;
     height: 52vh;
     width: 50%;
@@ -299,6 +371,8 @@ color: var(--darkblue);
     justify-content: space-evenly;
     transition: transform 0.5s ease-in;
   }
+
+
   .nav-active {
     transform: translateX(0%);
   }
@@ -332,6 +406,7 @@ color: var(--darkblue);
   }
 
   .foot-style {
+    color: var(--darkblue);
     padding: 1rem 0 1rem 0;
   }
 
@@ -371,6 +446,8 @@ color: var(--darkblue);
     justify-content: space-evenly;
     row-gap: 2em;
     column-gap: 2em;
+    justify-items: center;
+    align-items: center
   }
 
   .three-items {
@@ -523,6 +600,9 @@ color: var(--darkblue);
 
 .dynamic-size {
   height: 500px;
+}
+.section-padding{
+  margin: 0;
 }
 
 /* end main page */
