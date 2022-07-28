@@ -1,3 +1,23 @@
+/* Table of contents - for search
+
+All PAGES STLE
+---general style
+---background animation
+---heather style
+---footer style
+
+HTML PAGES
+---main page
+---shop page
+---blog page
+---about page
+
+MOBILE QUERRY
+--- mobile querry
+--- mobile slide
+--- tablet queery
+--- desktop querry*/
+
 :root {
   --darkblue: #0e3650;
   --lightblue: #54b1ee;
@@ -21,7 +41,7 @@
   display: none;
 }
 
-/* reset */
+/* ---reset */
 body {
   margin: 0;
   padding: 0;
@@ -49,19 +69,7 @@ a {
   text-decoration: none;
 }
 
-/* ___________________________________________
-       CSS Guide
-___________________________________________ */
-
-/* 01. General Styles                        
-
-
-
-   02. CSS Grid                          
-/* _____________________________________
-   01. General Styles
-   _____________________________________ */
-
+/* ---general style */
 .section-style h3,
 h2,
 h4,
@@ -115,15 +123,11 @@ p {
 }
 
 .custom-btn {
-  margin-left: 0.8rem;
-  margin-top: 1rem;
   color: #fff;
   border-radius: 9px;
-  padding: 10px 25px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: var(--fw-semi-bold);
-  letter-spacing: 3px;
   background: linear-gradient(0deg, #2f8ec5 0%, #185372 100%);
   border: none;
 }
@@ -132,6 +136,27 @@ p {
   color: var(--darkblue);
   background: white;
 }
+
+
+.btn-small {
+  margin-left: 0.7rem;
+  /* margin-top: .4rem; */
+  padding: 8px 15px;
+  font-size: .6rem;
+  letter-spacing: 1px;
+
+}
+.btn-big {
+  letter-spacing: 3px;
+  margin-left: 0.8rem;
+  margin-top: 1rem;
+  padding: 10px 25px;
+}
+
+
+
+
+
 
 header li {
   border-bottom: #54b1ee;
@@ -178,7 +203,15 @@ header a:hover {
   padding: 0;
 }
 
-/* backgound animation */
+.page-title {
+  height: 7rem;
+}
+.page-title h4 {
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-h3);
+}
+
+/* ---backgound animation */
 .circle {
   position: absolute;
   border-radius: 50%;
@@ -252,7 +285,7 @@ input {
   border: 0;
 }
 
-/*   ----------footer -------------- */
+/*   ----------footer style-------------- */
 footer {
   text-align: center;
 }
@@ -294,7 +327,7 @@ footer {
 
 /* ------------end of footer------------ */
 
-/* ---------------------main page stlye */
+/* ---------------------main page */
 .buttonStyle {
   padding-top: 6px;
   border: 0;
@@ -326,21 +359,22 @@ footer {
 
 /* -------------------------end of main page */
 
-/*------- Floats --------*/
+/*               ---shop page
+*/
 
-.f-left {
-  float: left;
+
+.product-price {
+  display: flex;
+  justify-content: space-between;
 }
 
-.f-right {
-  float: right;
-}
-/*------- End Floats --------*/
 
-/*  -------------------Start At Mobile screen--------------------------------- */
+
+/* ------------------------------blog page */
+/* ------------------------------about page */
+
+/*  ---------mobile querry----------------------- */
 @supports (grid-area: auto) {
-  /*------------ Start Mobile ------------*/
-
   .site {
     max-width: none;
   }
@@ -357,7 +391,7 @@ footer {
     transition: all 0.3s ease;
   }
 
-  /* Slide Navition */
+  /* --------mobile slide Navition */
   .nav-links {
     transform: translateX(-100%);
     color: var(--darkblue);
@@ -406,12 +440,7 @@ footer {
     }
   }
 
-  .foot-style {
-    color: var(--darkblue);
-    padding: 1rem 0 1rem 0;
-  }
-
-  /*------------ Mobile Grid Items ------------*/
+  /*-----------mobile querry-----------*/
   .nav-grid {
     display: grid;
     grid-template-columns: 1fr repeat(3, minmax(auto, 30em)) 1fr;
@@ -438,6 +467,8 @@ footer {
     display: grid;
     grid-column: 1 / span 2;
     grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: end;
   }
 
   .two-items {
@@ -451,13 +482,63 @@ footer {
     align-items: center;
   }
 
+  .shop-promo {
+    display: grid;
+    grid-column: 1 / span 2;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+
+  .shop-promo img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  
+  .hot-purchaseCopy h2 {
+    color: #f0fae8;
+    font-weight: var(--fw-semi-bold);
+    font-size: var(--fs-h2);
+    line-height: 2.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .hot-purchaseCopy h3 {
+    margin-left: 1rem;
+    color: #f0fae8;
+    font-weight: var(--fw-semi-bold);
+    font-size: var(--fs-h3);
+    line-height: 3rem;
+  }
+
+  .relatives {
+    position: relative;
+  }
+
+  .hot-purchaseCopy {
+    top: 30px;
+    right: 130px;
+    position: absolute;
+    width: 100px;
+  }
+
+
+  .couple {
+    display: grid;
+    grid-column: 1 / span 2;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-evenly;
+  }
+
   .three-items {
     display: grid;
     grid-column: 1 / span 2;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-evenly;
-    row-gap: 2em;
-    column-gap: 2em;
+    /* row-gap: 2em; */
+    /* column-gap: 2em; */
   }
 
   .four-items {
@@ -469,6 +550,25 @@ footer {
     column-gap: 2em;
     justify-items: center;
   }
+
+  .product-items {
+    display: grid;
+    grid-column: 1 / span 2;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .product-items img {
+    margin-top: 3rem;
+     width: 250px;
+    height: 250px;
+  }
+
+  .hide {
+    background-color: #2f8ec5;
+    padding-top: 2rem;
+}
+
 
   .footer-grid {
     display: grid;
@@ -505,7 +605,7 @@ footer {
     /* align-items: center; */
   }
 
-  /* ------------------- Start Tablet--------------------------- */
+  /* -------------------table querry-------------------------- */
   @media screen and (min-width: 768px) {
     .site {
       max-width: none;
@@ -549,17 +649,44 @@ footer {
       grid-column: 2 / span 2;
       grid-template-columns: repeat(2, 1fr);
       justify-content: space-evenly;
-      row-gap: 2em;
-      column-gap: 2em;
+      /* row-gap: 2em;
+      column-gap: 2em; */
     }
 
-    .three-items {
+    .product-items {
+      display: grid;
+      grid-column: 1 / span 3;
+      grid-template-columns: repeat(3, 1fr);
+      /* justify-content: space-evenly; */
+      justify-items: center;
+    }
+    .shop-promo {
       display: grid;
       grid-column: 2 / span 2;
+      grid-template-columns: repeat(1, 1fr);
+   justify-items: center;
+    }
+
+    .shop-promo img{
+      height: 350px;
+    }
+
+    .hot-purchaseCopy {
+      top: 80px;
+      right: 230px;
+    }
+
+    .product-items img {
+      width: 230px;
+      height: 230px;
+    }
+    .three-items {
+      display: grid;
+      grid-column: 1 / span 2;
       grid-template-columns: repeat(2, 1fr);
       justify-content: space-evenly;
-      row-gap: 2em;
-      column-gap: 2em;
+      /* row-gap: 2em; */
+      /* column-gap: 2em; */
     }
 
     .four-items {
@@ -609,10 +736,9 @@ footer {
     .foot-style {
       padding: 1rem 0 1rem 0;
     }
-
-    /*------------  End Grid Items ------------*/
   }
 
+  /* -------------------desktop querry-----------------------------------============= */
   @media screen and (min-width: 1024px) {
     /* start main page */
 
@@ -669,7 +795,7 @@ footer {
       grid-column: 2 / span 2;
       grid-template-columns: repeat(2, 1fr);
       justify-content: space-evenly;
-      row-gap: 2em;
+      /* row-gap: 2em; */
       /* column-gap: 2em; */
     }
 
@@ -678,9 +804,46 @@ footer {
       grid-column: 2 / span 2;
       grid-template-columns: repeat(3, 1fr);
       justify-content: space-evenly;
-      row-gap: 2em;
-      column-gap: 2em;
+      /* row-gap: 2em; */
+      /* column-gap: 2em; */
     }
+
+    .product-items {
+      display: grid;
+      grid-column: 2 / span 2;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+    }
+
+    .product-items img {
+      width: 230px;
+      height: 230px;
+    }
+
+
+    .shop-promo {
+      display: grid;
+      grid-column: 2 / span 2;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+
+    .shop-promo img{
+      height: 280px;
+    }
+
+
+    .hot-purchaseCopy {
+      top: 45px;
+      right: 100px;
+    }
+
+    .hot-purchaseCopy h2{
+      font-size: 2.2rem;
+
+    }
+
+
 
     .four-items {
       display: grid;
