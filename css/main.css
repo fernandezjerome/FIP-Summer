@@ -408,6 +408,10 @@ background-color: #eeece7;
   line-height: .8rem;
   font-size: .7rem;
 }
+.blog-headline h3 {
+  font-size: 1.5rem;
+  font-weight: var(--fw-semi-bold);
+}
 
 .blog1 img {
   width: 100%;
@@ -667,7 +671,7 @@ background-color: #eeece7;
   align-items: flex-start
    }
 .blog-headline { grid-area: 1 / 1 / 2 / 3; 
-margin-top: 2rem;
+  margin-top: 2rem;
 justify-self: center;
 }
 .blog1 { grid-area: 2 / 1 / 4 / 3; }
