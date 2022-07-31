@@ -35,6 +35,4 @@ const toggle5 = document.querySelector("#show-hide5");
 
       }
 
-
-
     })();
