@@ -15,6 +15,23 @@
   </head>
   <body class="site">
     <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+
     <h1 class="hidden">Orbitz Rebrand</h1>
     <a class="hidden" href="#content">Skip to content</a>
 
@@ -28,7 +45,9 @@
       </div>
       <div class="logo">
         <h3 class="hidden">Orbitz logo</h3>
+       <div>
         <img src="images/orbitz_logo.svg" alt="orbitz logo" />
+      </div> 
       </div>
       <nav class="top-nav" aria-label="Main Navigation">
         <h3 class="hidden">Main Navigation</h3>
@@ -77,9 +96,23 @@
                 melon, and vanilla orange With more juice and textures. Trust in
                 quality and quantity. It's simple.
               </p>
-                <a id="play-video" class="video-play-button" href="https://youtu.be/Y4xN48rDpiQ">
-                <span></span>
-              </a>
+              
+                <a class="video-play-button" href="https://youtu.be/Y4xN48rDpiQ">
+                <span></span></a>
+                
+                <div class="orbit-rotate">
+                <svg viewBox="0 0 160 160" width="110" height="110" fill="#0891ec">
+                  <circle cx="80" cy="80" r="50" />
+                  <g transform=" matrix(0.866, -0.5, 0.25, 0.433, 80, 80)">
+                    <path d="M 0,70 A 65,70 0 0,0 65,0 5,5 0 0,1 75,0 75,70 0 0,1 0,70Z" fill="#FFF">
+                      <animateTransform attributeName="transform" type="rotate" from="360 0 0" to="0 0 0" dur="1s" repeatCount="indefinite" />
+                    </path>
+                  </g>
+                  <path d="M 50,0 A 50,50 0 0,0 -50,0Z" transform="matrix(0.866, -0.5, 0.5, 0.866, 80, 80)" />
+                </svg>
+              </div>
+        
+                
   
             </div>
           </div>
@@ -159,8 +192,8 @@
       <section class="section-style section-padding">
         <h2 class="hidden">Choice Section</h2>
         <div class="two-items glass-effect glass-corner">
-          <div><img src="images/fresh-spirits.jpg" alt="fresh spirits" /></div>
-          <div>
+          <div class="canadian choice-img"><img src="images/fresh-spirits.jpg" alt="fresh spirits" /></div>
+          <div class="cad-margin">
             <h5>peoples Choice</h5>
             <h3>Canadian's Finest Choice</h3>
             <p>
@@ -193,13 +226,21 @@
         </div>
       </section>
 
-      <section class="partners">
+      <section class="partners section-padding">
         <h2 class="hidden">Partners</h2>
         <div class="four-items glass-effect glass-corner">
-          <img src="images/partner-01.svg" alt="partner 1 logo" />
-          <img src="images/partner-02.svg" alt="partner 2 logo" />
-          <img src="images/partner-03.svg" alt="partner 3 logo" />
-          <img src="images/partner-04.svg" alt="partner 4 logo" />
+          <div><img src="images/partner-01.svg" alt="partner 1 logo" />
+          </div>
+          <div><img src="images/partner-02.svg" alt="partner 1 logo" />
+
+          </div>
+          <div><img src="images/partner-03.svg" alt="partner 1 logo" />
+
+          </div>
+          <div><img src="images/partner-04.svg" alt="partner 1 logo" />
+
+          </div>
+     
         </div>
       </section>
     </main>
