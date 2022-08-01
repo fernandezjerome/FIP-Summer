@@ -478,7 +478,58 @@ footer {
 }
 
 
+.photo-container {
+  text-align: center;
+  margin: 1rem 1rem 1rem 1rem;
+}
+.photo {
+  position: relative;
+  line-height: 0;
+  margin-bottom: .5rem;
+  overflow: hidden;
+}
+.photo-container img {
+  max-width: 100%;
+}
 
+.photo-overlay {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
+  padding-right: 20px;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.photo-overlay p {
+  font-size: .7rem;
+  margin-top: 1rem;
+  line-height: 1rem;
+}
+
+.photo-overlay {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.photo-overlay:hover {
+  opacity: 1;
+}
+
+
+img {
+  transition: transform 0.5s cubic-bezier(0.7, -0.39, 0.31, 1.38);
+}
+
+.photo:hover img {
+  transform: scale(1.1);
+}
 
 /* ------------------------------blog page */
 
@@ -783,7 +834,7 @@ display: block !important;
   .hot-purchaseCopy h2 {
     color: #f0fae8;
     font-weight: var(--fw-semi-bold);
-    font-size: var(--fs-h2);
+    font-size: 2rem;
     line-height: 2.4rem;
     margin-bottom: 1rem;
   }
@@ -802,7 +853,7 @@ display: block !important;
 
   .hot-purchaseCopy {
     top: 30px;
-    right: 130px;
+    left: 270px;
     position: absolute;
     width: 100px;
   }
@@ -817,11 +868,10 @@ display: block !important;
 
   .three-items {
     display: grid;
-    grid-column: 1 / span 2;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     justify-content: space-evenly;
-    /* row-gap: 2em; */
-    /* column-gap: 2em; */
+    row-gap: 1rem;
+    column-gap: 1rem;
   }
 
   .four-items {
@@ -990,6 +1040,9 @@ justify-self: center;
     }
 
 
+  
+
+
     .trending-blog {
       display: grid;
       grid-column: 2 / span 2;
@@ -1017,20 +1070,23 @@ justify-self: center;
       height: 350px;
     }
 
-    .hot-purchaseCopy {
-      top: 80px;
-      right: 230px;
-    }
 
+    .hot-purchaseCopy {
+      top: 70px;
+      left: 370px;
+      position: absolute;
+      width: 100px;
+    }
 
     .three-items {
       display: grid;
-      grid-column: 1 / span 2;
+      grid-column: 2 / span 2;
       grid-template-columns: repeat(2, 1fr);
       justify-content: space-evenly;
       /* row-gap: 2em; */
       /* column-gap: 2em; */
     }
+
 
     .four-items {
       display: grid;
@@ -1232,10 +1288,10 @@ justify-self: center;
 
 
     .hot-purchaseCopy {
-      top: 45px;
-      right: 100px;
-    }
+      top: 40px;
+      left: 270px;
 
+    }
     .hot-purchaseCopy h2{
       font-size: 2.2rem;
 
