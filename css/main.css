@@ -654,6 +654,7 @@ background-color: #eeece7;
 
 
 .frequent-questions h3 {
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -664,6 +665,7 @@ font-weight: var(--fw-regular);
 color: var(--darkblue);
 }
 .frequent-questions h5{
+  margin: 0;
   font-size: .75rem;
   font-weight: var(--fw-regular);
   font-weight: var(--fw-regular);
