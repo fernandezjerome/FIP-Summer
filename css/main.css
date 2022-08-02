@@ -59,6 +59,14 @@ h1,h2,h3,h4,h5,p { margin: 0; padding: 0; }
 
 a { text-decoration: none }
 
+.page-banner {
+  position: relative;
+
+}
+
+
+
+
 /* ---general style */
 .page-banner h3 {
   margin-right: 2rem;
@@ -118,6 +126,7 @@ header a:hover {
 }
 
 .section-style p {
+  margin-top: 2rem;
   color: var(--darkblue);
   font-size: var(--fs-pharagraph);
 }
