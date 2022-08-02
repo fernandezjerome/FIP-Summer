@@ -10,19 +10,19 @@ const profile3 = document.querySelector("#profileMelon"); //profile 3
 const dynaTeam = [
   [
     "Vanilla Orange",
-    `Vanilla orange sub`,
+    `Vanilla and Orange Flavor`,
     `The sweetness of an orange paired with the smoothness of vanilla are a match made in flavor heaven. Bright and bold, there's simply no other combination like it. Try it today!`,
   ],
 
   [
     "Blueberry Mellon",
-    `Blueberry Sub`,
+    `Blueberry and Melon Flavors`,
     `The blueberry flavor comes through first, followed by the watermelon. The taste is authentic, and the first sip transports you to the awesome warmness of the tropical countries.`,
   ],
 
   [
     "Raspberry Citrus",
-    `Raspberry Sub`,
+    `Raspberry and Citrus Flavor`,
     `A green, acid and sweet natural profile. It evokes sensations of fresh juicy fruit with slightly crunchy floral undertones blended with woody notes taste at the end.`,
   ],
 ];
