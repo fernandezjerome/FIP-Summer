@@ -12,6 +12,9 @@ Pawan Pandeya
 ![image](https://user-images.githubusercontent.com/97752074/182278263-7090507d-9adb-4ef6-a9ac-ec0c937e1f91.png)
 ![image](https://user-images.githubusercontent.com/97752074/182278319-5083051d-bcc1-4563-8436-813d1dac49fc.png)
 
+# transistions
+![image](https://user-images.githubusercontent.com/97752074/182280211-58261c66-0986-4f2b-936b-69f71beeb29f.png)
+
 # Used
 html
 css
